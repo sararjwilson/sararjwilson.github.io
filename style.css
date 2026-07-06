@@ -4,9 +4,9 @@
   --panel-2: #0f1810;
   --text: #ffffff;
   --muted: rgba(255,255,255,0.75);
-  --accent: #5eff63;
-  --accent-soft: rgba(15, 100, 14, 0.2);
-  --accent-outline: rgba(37, 134, 38, 0.55);
+  --accent: #ff7300;
+  --accent-soft: rgba(100, 14, 14, 0.2);
+  --accent-outline: rgba(134, 37, 37, 0.55);
   --outline: rgba(255,255,255,0.08);
   --outline-2: rgba(255,255,255,0.12);
   --r-lg: 18px;
