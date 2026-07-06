@@ -1,7 +1,7 @@
 :root {
-  --bg: #0b100c;
-  --panel: #121c12;
-  --panel-2: #0f1810;
+  --bg: #100b0b;
+  --panel: #1c1212;
+  --panel-2: #180f0f;
   --text: #ffffff;
   --muted: rgba(255,255,255,0.75);
   --accent: #ff7300;
@@ -46,11 +46,11 @@ html { scroll-behavior: smooth; }
 .container {
   max-width: var(--container-w);
   margin: 0 auto;
-  background: linear-gradient(180deg, rgba(18, 28, 19, 0.96), rgba(15, 24, 15, 0.96));
+  background: linear-gradient(180deg, rgba(28, 18, 18, 0.96), rgba(24, 15, 15, 0.96));
   border: 1px solid var(--outline-2);
   border-radius: var(--r-lg);
   padding: var(--pad);
-  box-shadow: 0 22px 70px rgba(0,0,0,0.55), 0 0 0 1px rgba(15, 255, 99, 0.06) inset;
+  box-shadow: 0 22px 70px rgba(0,0,0,0.55), 0 0 0 1px rgba(255, 15, 15, 0.06) inset;
   position: relative;
   overflow: hidden;
 }
@@ -60,7 +60,7 @@ html { scroll-behavior: smooth; }
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(135deg, rgba(15,255,99,0.12), transparent 35%), linear-gradient(315deg, rgba(15,255,99,0.08), transparent 40%);
+  background: linear-gradient(135deg, rgba(255, 15, 15, 0.12), transparent 35%), linear-gradient(315deg, rgba(255, 15, 15, 0.08), transparent 40%);
   opacity: 0.35;
 }
 
@@ -94,7 +94,7 @@ a:hover {
   height: 180px;
   border-radius: var(--r-md);
   border: 1px solid var(--outline-2);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.45), 0 0 0 1px rgba(15,255,99,0.18) inset;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.45), 0 0 0 1px rgba(255, 15, 15, 0.18) inset;
   object-fit: cover;
 }
 
@@ -118,7 +118,7 @@ a:hover {
   height: 9px;
   margin-top: 14px;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(95,255,99,0.15) 0%, rgba(95,255,99,0.85) 30%, rgba(95,255,99,0.25) 70%, rgba(255,255,255,0.06) 100%);
+  background: linear-gradient(90deg, rgba(255, 95, 95, 0.15) 0%, rgba(255, 95, 95, 0.85) 30%, rgba(255, 95, 95, 0.25) 70%, rgba(255,255,255,0.06) 100%);
   outline: 1px solid rgba(255,255,255,0.10);
   box-shadow: 0 0 18px rgba(95,255,99,0.20);
 }
@@ -151,8 +151,8 @@ a:hover {
 .nav-bar a:hover {
   transform: translateY(-1px);
   border-color: var(--accent-outline);
-  background: rgba(15,255,99,0.12);
-  box-shadow: 0 0 0 3px rgba(15,255,99,0.10);
+  background: rgba(255, 15, 15, 0.12);
+  box-shadow: 0 0 0 3px rgba(255, 15, 15, 0.1);
 }
 
 .nav-bar.nav-vertical ul {
