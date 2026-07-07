@@ -1,17 +1,19 @@
 :root {
-  --bg: #100b0b;
-  --panel: #1c1212;
-  --panel-2: #180f0f;
+  --bg: #0a0a0a;
+  --panel: #141414;
+  --panel-2: #101010;
   --text: #ffffff;
-  --muted: rgba(255,255,255,0.75);
-  --accent: #ff7300;
-  --accent-soft: rgba(100, 14, 14, 0.2);
-  --accent-outline: rgba(134, 37, 37, 0.55);
-  --outline: rgba(255,255,255,0.08);
-  --outline-2: rgba(255,255,255,0.12);
-  --r-lg: 18px;
-  --r-md: 14px;
-  --r-sm: 12px;
+  --muted: rgba(255,255,255,0.70);
+  --accent: #ffffff;
+  --accent-soft: rgba(255,255,255,0.08);
+  --accent-outline: rgba(255,255,255,0.35);
+  --link: #3b82f6;
+  --link-hover: #60a5fa;
+  --outline: rgba(255,255,255,0.10);
+  --outline-2: rgba(255,255,255,0.16);
+  --r-lg: 2px;
+  --r-md: 2px;
+  --r-sm: 2px;
   --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   --font-heading: "Space Grotesk", "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
@@ -32,13 +34,10 @@ body {
   font-size: 16px;
   line-height: 1.75;
   background-image:
-    radial-gradient(1200px 800px at 20% 0%, rgba(95,255,99,0.08), transparent 55%),
-    radial-gradient(900px 700px at 80% 10%, rgba(95,255,99,0.05), transparent 60%),
-    linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px),
-    repeating-linear-gradient(to bottom, rgba(255,255,255,0.02) 0 1px, transparent 1px 6px);
-  background-size: auto, auto, 44px 44px, 44px 44px, auto;
-  background-position: center, center, 0 0, 0 0, 0 0;
+    linear-gradient(to right, rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 44px 44px, 44px 44px;
+  background-position: 0 0, 0 0;
 }
 
 html { scroll-behavior: smooth; }
@@ -46,26 +45,21 @@ html { scroll-behavior: smooth; }
 .container {
   max-width: var(--container-w);
   margin: 0 auto;
-  background: linear-gradient(180deg, rgba(28, 18, 18, 0.96), rgba(24, 15, 15, 0.96));
+  background: var(--panel);
   border: 1px solid var(--outline-2);
   border-radius: var(--r-lg);
   padding: var(--pad);
-  box-shadow: 0 22px 70px rgba(0,0,0,0.55), 0 0 0 1px rgba(255, 15, 15, 0.06) inset;
+  box-shadow: 0 22px 70px rgba(0,0,0,0.6);
   position: relative;
   overflow: hidden;
 }
 
 .container::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(135deg, rgba(255, 15, 15, 0.12), transparent 35%), linear-gradient(315deg, rgba(255, 15, 15, 0.08), transparent 40%);
-  opacity: 0.35;
+  content: none;
 }
 
 a, a:visited {
-  color: var(--accent) !important;
+  color: var(--link) !important;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   font-weight: 650;
@@ -73,8 +67,8 @@ a, a:visited {
 }
 
 a:hover {
-  color: var(--text) !important;
-  border-bottom: 1px solid var(--accent);
+  color: var(--link-hover) !important;
+  border-bottom: 1px solid var(--link-hover);
 }
 
 .header-flex {
@@ -94,7 +88,7 @@ a:hover {
   height: 180px;
   border-radius: var(--r-md);
   border: 1px solid var(--outline-2);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.45), 0 0 0 1px rgba(255, 15, 15, 0.18) inset;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.5);
   object-fit: cover;
 }
 
@@ -115,12 +109,11 @@ a:hover {
 
 .stripe {
   width: 100%;
-  height: 9px;
+  height: 4px;
   margin-top: 14px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(255, 95, 95, 0.15) 0%, rgba(255, 95, 95, 0.85) 30%, rgba(255, 95, 95, 0.25) 70%, rgba(255,255,255,0.06) 100%);
-  outline: 1px solid rgba(255,255,255,0.10);
-  box-shadow: 0 0 18px rgba(95,255,99,0.20);
+  border-radius: 0;
+  background: #ffffff;
+  opacity: 0.85;
 }
 
 .nav-bar ul {
@@ -138,8 +131,8 @@ a:hover {
 .nav-bar a {
   display: inline-block;
   padding: 10px 16px;
-  border-radius: 14px;
-  background: rgba(0,0,0,0.40);
+  border-radius: 0;
+  background: rgba(255,255,255,0.04);
   border: 1px solid var(--outline-2);
   color: var(--text) !important;
   font-weight: 650;
@@ -151,8 +144,8 @@ a:hover {
 .nav-bar a:hover {
   transform: translateY(-1px);
   border-color: var(--accent-outline);
-  background: rgba(255, 15, 15, 0.12);
-  box-shadow: 0 0 0 3px rgba(255, 15, 15, 0.1);
+  background: rgba(255,255,255,0.09);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.06);
 }
 
 .nav-bar.nav-vertical ul {
@@ -211,7 +204,7 @@ section ul li {
 
 .photo-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 22px;
   margin-top: 16px;
   margin-bottom: 28px;
@@ -221,9 +214,9 @@ section ul li {
   width: 100%;
   aspect-ratio: 1.1;
   object-fit: cover;
-  border-radius: var(--r-md);
+  border-radius: 0;
   border: 1px solid var(--outline-2);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
   cursor: pointer;
   transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
 }
@@ -231,14 +224,14 @@ section ul li {
 .photo-gallery img:hover {
   transform: translateY(-2px) scale(1.01);
   border-color: var(--accent-outline);
-  box-shadow: 0 18px 55px rgba(0,0,0,0.55), 0 0 0 3px rgba(15,255,99,0.10);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.6), 0 0 0 3px rgba(255,255,255,0.08);
 }
 
 .lightbox {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.90);
+  background: rgba(0,0,0,0.92);
   justify-content: center;
   align-items: center;
   z-index: 999;
@@ -247,7 +240,7 @@ section ul li {
 .lightbox-img {
   max-width: 92%;
   max-height: 92%;
-  border-radius: var(--r-sm);
+  border-radius: 0;
   border: 1px solid rgba(255,255,255,0.16);
   box-shadow: 0 30px 90px rgba(0,0,0,0.75);
 }
@@ -260,16 +253,16 @@ section ul li {
   color: var(--text);
   cursor: pointer;
   user-select: none;
-  background: rgba(18,22,28,0.55);
+  background: rgba(0,0,0,0.55);
   border: 1px solid rgba(255,255,255,0.14);
-  border-radius: 999px;
+  border-radius: 0;
   padding: 2px 12px 6px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.45);
 }
 
 .close:hover {
   border-color: var(--accent-outline);
-  box-shadow: 0 0 0 3px rgba(15,255,99,0.10);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.08);
 }
 
 @media (max-width: 820px) {
